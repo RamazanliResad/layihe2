@@ -43,14 +43,36 @@ body {
 .todo-btn-sort {
     width: 20px;
     height: 20px;
-    background-image: url('./Group\ 74.png');
+    background: none;
+    border: none;
     background-repeat: no-repeat ;
     background-position: center;
     background-size: contain;
     margin-right: 18px;
-
+    cursor: pointer;
 }
 
+.low {
+    background-image: url('./Group\ 74.png');
+}
+
+.low:hover {
+    background-image: url('./Group\ 73.png');
+}
+
+.high {
+    background-image: url('./Group\ 90.png');
+}
+
+.high:hover {
+    background-image: url('./Group\ 91.png');
+}
+
+
+.todo-button {
+    position: relative;
+  }
+  
 .todo-btn-add {
     padding: 8px 12px;
     background-color: #833AE0;
@@ -61,23 +83,38 @@ body {
     height: 42px;
     margin-bottom: 19px;
 }
+.plus {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: darkviolet;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 92px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+}
+
 .todo-list-item { 
     list-style: none;
-    
+    position: relative;
     
 }
 .todo-list{
     margin-bottom: 18px;
-    border: 1px solid #C4C4C4;
-    border-radius: 10px;
-
-
+    
+    
 }
 .todo-list-item-text {
     box-sizing: border-box;
+    border: 1px solid #C4C4C4;
+    border-radius: 10px;
 
  
- width: 275px;
+ width: 300px;
  height: 39px;
  left: 159px;
  top: 365px;
@@ -86,10 +123,20 @@ body {
 
 }
 .todo-list-item-btn {
-
+    width: 24px;
+    height: 24px;
+    background: none;
+    border: none;
+    background-image: url('./Group\ 77.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    top: 8px;
+    right: 25px;
+    cursor: pointer;
+    
 }
-
-
-.todo-button {
-
+.todo-list-item-btn:hover {
+    background-image: url('./Group\ 70.png');
 }
