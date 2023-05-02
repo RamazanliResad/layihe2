@@ -1,15 +1,16 @@
 const add = document.querySelector('#add');
-const sort = document.querySelector('#sort');
+const sort = document.querySelector('.todo-btn-sort');
 const list = document.querySelector('#list');
 let sorted = false;
 
 function addListItem(text, list) {
     const li = document.createElement('li');
+    li.classList.add('todo-list-item');
     const span = document.createElement('span');
     span.innerText = text;
 
-    const del = document.createElement('button')
-    del.innerText ='X';
+    const del = document.createElement('button');
+    del.classList.add('todo-list-item-btn');
     del.addEventListener('click', (e) => {
         e.target.parentElement.remove();
     });
@@ -19,11 +20,13 @@ function addListItem(text, list) {
 }
 
 add.addEventListener('click', () => {
- const info = prompt();
- addListItem(info, list);
+    const item = document.querySelector('.todo-list-item-text')
+    const info = item.value;
+    addListItem(info, list);
+    item.value = '';
 });
 
-sort:addEventListener('click', () => {
+sort.addEventListener('click', (e) => {
     const arr = new Array ();
     const siyahi = document.querySelectorAll('li');
     siyahi.forEach(li => {
@@ -35,6 +38,9 @@ sort:addEventListener('click', () => {
             if(a < b) return -1;
             return 0;
         });
+        sorted = true;
+        e.target.classList.remove('low');
+        e.target.classList.add('high');
     } else {
         arr.sort((a,b) => {
             if(a < b) return 1;
@@ -42,6 +48,8 @@ sort:addEventListener('click', () => {
             return 0;
         });
         sorted = false;
+        e.target.classList.remove('high');
+        e.target.classList.add('low');
     }
 
     list.innerHTML= '';

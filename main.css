@@ -29,7 +29,7 @@ body {
 .todo-title {
     font-family: sans-serif;
     text-align: center;
-    font-size: 20px;
+    font-size: 30px;
     margin: 10px 0;
     
 
@@ -101,18 +101,27 @@ body {
 .todo-list-item { 
     list-style: none;
     position: relative;
-    
+    margin: 4px auto;
+    height: 28px;
+    font-size: 20px;
+    text-align: left;
+    padding: 2px 10px;
+    border-bottom: 1px solid lightgray;
 }
 .todo-list{
-    margin-bottom: 18px;
-    
+    margin: 20px auto;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    width: 300px;
+    padding: 4px;
     
 }
 .todo-list-item-text {
     box-sizing: border-box;
     border: 1px solid #C4C4C4;
     border-radius: 10px;
-
+font-size: 18px;
+padding: 0 4px;
  
  width: 300px;
  height: 39px;
@@ -132,7 +141,7 @@ body {
     background-position: center;
     background-size: contain;
     position: absolute;
-    top: 8px;
+    top: 2px;
     right: 25px;
     cursor: pointer;
     
