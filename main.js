@@ -12,11 +12,15 @@ function addListItem(text, list) {
     const del = document.createElement('button');
     del.classList.add('todo-list-item-btn');
     del.addEventListener('click', (e) => {
+        if(list.children.length === 1) {
+            list.classList.remove('todo-list');
+        }
         e.target.parentElement.remove();
     });
 
     li.append(span, del);
     list.append(li);
+    list.classList.add('todo-list');
 }
 
 add.addEventListener('click', () => {
